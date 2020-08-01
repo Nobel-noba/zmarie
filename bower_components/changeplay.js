@@ -16,7 +16,7 @@ function homelocater() {
     document.location.href='../../';
 }
 function edit(id) {
-    document.location.href='pages/edit/edit.php?id='+id;
+    document.location.href='../noba/pages/edit/edit.php?id='+id;
 }
 function del(id) {
     document.location.href='pages/edit/delete.php?id='+id;

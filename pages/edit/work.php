@@ -8,7 +8,7 @@ $scale=$_POST['scale'];
 $transpose=$_POST['transpose'];
 $idea=$_POST['idea'];
 
-$con=mysqli_connect("localhost","root","","music");
+$con=mysqli_connect("localhost","yonatanaberacom_nobel","$$$$001122Ku","yonatanaberacom_zmarie");
 $sql="UPDATE `music` SET NAME='".$name."' ,SNAME='".$sname."' ,STYLE='".$style."' ,SCALE='".$scale."' ,TRANSPOSE='".$transpose."',IDEA='".$idea."' WHERE ID=".$musicid;
 
 if ($con->query($sql) === TRUE) {
