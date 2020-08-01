@@ -1,7 +1,12 @@
 <?php session_start();
+if(!isset($_SERVER['HTTP_REFERER'])){
+    header('location: ../../index.php');
+    exit;
+}
+
 $id=$_GET["id"];
 $_SESSION['ID']=$id;
-$con=mysqli_connect("localhost","root","","music");
+$con=mysqli_connect("localhost","yonatanaberacom_nobel","$$$$001122Ku","yonatanaberacom_zmarie");
 $sql="SELECT * FROM music WHERE id=".$id;
 $row=$con->query($sql)->fetch_assoc();
 $name=$row['NAME'];

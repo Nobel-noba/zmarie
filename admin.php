@@ -1,4 +1,8 @@
 <?php session_start();
+if(!isset($_SERVER['HTTP_REFERER'])){
+    header('location: login.php');
+    exit;
+}
 
 ?>
 <!DOCTYPE html>
@@ -24,14 +28,16 @@
       <h1>
         Zemare
         <small>ordering table</small>
+
           <div class="navbar navbar-fixed-top" style="float: right" id="player">
           </div>
+
       </h1>
+        <button value="Logout" style="float: right;background-color: orange" onclick="logout()">Logout</button>
     </section>
 
     <?php
-    $con=mysqli_connect("localhost","root","","music");
-?>
+    $con=mysqli_connect("localhost","yonatanaberacom_nobel","$$$$001122Ku","yonatanaberacom_zmarie"); ?>
     <!-- Main content -->
     <section class="content">
       <div class="row">
@@ -39,6 +45,7 @@
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">ORDERING TABLE</h3>
+                <button class="btn btn-primary btn-sm" onclick=insert() style="margin-top: 10px">insert</button>
                 <h4 style="float: right">just click in any of the columns and it will sort it accordingly</h4>
             </div>
 
@@ -74,6 +81,8 @@
                             echo "<td>".$row["idea"]."</td>";
                             echo "<td>
                                       <button id='".$row['id']."' class='btn btn-sm btn-warning' onclick='locator(id)'><i class='glyphicon glyphicon-play'></i></button>
+                                      <button id='".$row['id']."' class='btn btn-sm btn-info' onclick='edit(id)'><i class='glyphicon glyphicon-edit'></i></button>
+                                      <button id='".$row['id']."' class='btn btn-sm btn-danger' onclick='del(id)'><i class='glyphicon glyphicon-trash'></i></button>
                                    </td></tr>
                                       ";}
                     }?>
@@ -98,6 +107,7 @@
         <!-- /.col -->
       </div>
       <!-- /.row -->
+
     </section>
     <!-- /.content -->
   <!-- /.content-wrapper -->
@@ -105,7 +115,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0.0(beta)
     </div>
-    <strong>Copyright &copy; 2019-2020 <a href="#">NOBEL MITIKU</a>.</strong> All rights
+    <strong>Copyright &copy; 2019-2020 <a href="https://adminlte.io">Noba</a>.</strong> All rights
     reserved.
   </footer>
   <div class="control-sidebar-bg"></div>

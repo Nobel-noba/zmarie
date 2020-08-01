@@ -19,8 +19,11 @@ function edit(id) {
     document.location.href='pages/edit/edit.php?id='+id;
 }
 function del(id) {
-    document.location.href='pages/edit/delete.php?id='+id;
+    document.location.href='pages/delete/delete.php?id='+id;
 }
 function insert() {
     document.location.href='pages/insert/insert.php';
+}
+function logout() {
+    document.location.href='login.php';
 }
