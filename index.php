@@ -30,7 +30,7 @@
     </section>
 
     <?php
-    $con=mysqli_connect("localhost","root","","music");
+    $con=mysqli_connect("localhost","yonatanaberacom_nobel","$$$$001122Ku","yonatanaberacom_zmarie");
 ?>
     <!-- Main content -->
     <section class="content">

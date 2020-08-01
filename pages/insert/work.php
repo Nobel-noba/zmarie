@@ -6,7 +6,7 @@ $scale=$_POST['scale'];
 $transpose=$_POST['transpose'];
 $idea=$_POST['idea'];
 
-$con=mysqli_connect("localhost","root","","music");
+$con=mysqli_connect("localhost","yonatanaberacom_nobel","$$$$001122Ku","yonatanaberacom_zmarie");
 $sql="INSERT INTO `music` (`NAME`, `SNAME`, `STYLE`, `SCALE`, `TRANSPOSE`, `IDEA`) VALUES ('$name', '$sname', '$style', '$scale', $transpose,'$idea')";
 if ($con->query($sql) === TRUE) {
     echo "New record created successfully" .$name;
